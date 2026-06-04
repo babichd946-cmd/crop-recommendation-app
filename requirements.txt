@@ -1,5 +1,7 @@
-flask
-tensorflow
-pandas
-numpy
-gunicorn
+flask>=2.0
+tensorflow>=2.13
+pandas>=1.5
+numpy>=1.23
+gunicorn>=20
+h5py>=3.8
+keras>=2.13
