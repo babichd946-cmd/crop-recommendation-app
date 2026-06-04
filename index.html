@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+    <title>AgroRadar - Підбір культури</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <!-- TensorFlow.js CDN -->
+	<script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@3.21.0/dist/tf.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>AgroRadar</h1>
+            <p>Підберіть ідеальну культуру для ваших умов</p>
+        </header>
+
+        <div class="form-card">
+            <h2>Параметри ґрунту та клімату</h2>
+            
+            <div class="input-group">
+                <label for="temperature"> Температура (°C)</label>
+                <input type="number" id="temperature" step="0.1" placeholder="наприклад: 23.5" required>
+                <span class="hint">Оптимальний діапазон: 6-47°C</span>
+            </div>
+
+            <div class="input-group">
+                <label for="humidity"> Вологість (%)</label>
+                <input type="number" id="humidity" step="0.1" placeholder="наприклад: 71.3" required>
+                <span class="hint">Оптимальний діапазон: 6-100%</span>
+            </div>
+
+            <div class="input-group">
+                <label for="ph">pH ґрунту</label>
+                <input type="number" id="ph" step="0.1" placeholder="наприклад: 6.45" required>
+                <span class="hint">Оптимальний діапазон: 3.5-9.9</span>
+            </div>
+
+            <div class="input-group">
+                <label for="rainfall"> Опади (мм/рік)</label>
+                <input type="number" id="rainfall" step="0.1" placeholder="наприклад: 751.5" required>
+                <span class="hint">Оптимальний діапазон: 20-6000 мм</span>
+            </div>
+
+            <button id="predictBtn" class="btn-primary"> Розрахувати культуру</button>
+        </div>
+
+        <div id="result" class="result-card hidden">
+            <h2> Результат підбору</h2>
+            <div id="resultContent"></div>
+        </div>
+
+        <footer>
+            <p>© 2026 AgroRadar</p>
+        </footer>
+    </div>
+
+    <script src="/static/script.js"></script>
+</body>
+</html>

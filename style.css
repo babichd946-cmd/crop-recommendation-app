@@ -1,0 +1,230 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background: linear-gradient(135deg, #2f5d20 0%, #6a5745 100%);
+    min-height: 100vh;
+    padding: 20px;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+header {
+    text-align: center;
+    margin-bottom: 30px;
+    color: white;
+    text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+}
+
+header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 1.1rem;
+    opacity: 0.9;
+}
+
+.form-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    margin-bottom: 30px;
+}
+
+.form-card h2 {
+    color: #2f5d20;
+    margin-bottom: 25px;
+    text-align: center;
+}
+
+.input-group {
+    margin-bottom: 20px;
+}
+
+.input-group label {
+    display: block;
+    font-weight: 600;
+    color: #3b2c20;
+    margin-bottom: 8px;
+    font-size: 1rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 12px 15px;
+    border: 2px solid #e0e0e0;
+    border-radius: 12px;
+    font-size: 1rem;
+    transition: all 0.3s ease;
+}
+
+.input-group input:focus {
+    outline: none;
+    border-color: #75B956;
+    box-shadow: 0 0 0 3px rgba(117, 185, 86, 0.2);
+}
+
+.input-group .hint {
+    display: block;
+    font-size: 0.75rem;
+    color: #999;
+    margin-top: 5px;
+}
+
+.btn-primary {
+    width: 100%;
+    background: linear-gradient(135deg, #75B956 0%, #2f5d20 100%);
+    color: white;
+    border: none;
+    padding: 14px;
+    font-size: 1.1rem;
+    font-weight: 600;
+    border-radius: 12px;
+    cursor: pointer;
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.btn-primary:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+.btn-primary:active {
+    transform: translateY(0);
+}
+
+.result-card {
+    background: white;
+    border-radius: 20px;
+    padding: 30px;
+    box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+    animation: slideIn 0.5s ease;
+}
+
+.result-card h2 {
+    color: #2f5d20;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+.result-card.hidden {
+    display: none;
+}
+
+.crop-card {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+/* СТИЛЬ ДЛЯ КАРТИНКИ КУЛЬТУРИ (ДОДАЙТЕ ЦЕ) */
+.crop-image {
+    width: 150px;
+    height: 150px;
+    object-fit: cover;
+    border-radius: 50%;
+    margin-bottom: 15px;
+    border: 3px solid #75B956;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+}
+
+.crop-name {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #3b2c20;
+    margin-bottom: 15px;
+}
+
+.crop-probability {
+    background: #e8f5e9;
+    padding: 10px 20px;
+    border-radius: 20px;
+    color: #2e7d32;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.crop-description {
+    color: #555;
+    line-height: 1.6;
+    max-width: 500px;
+}
+
+.ingredients-list {
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 12px;
+    margin-top: 20px;
+    text-align: left;
+}
+
+.ingredients-list h4 {
+    color: #2f5d20;
+    margin-bottom: 10px;
+}
+
+.ingredients-list ul {
+    margin-left: 20px;
+    color: #666;
+}
+
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+.loading {
+    text-align: center;
+    padding: 20px;
+    color: #75B956;
+    font-weight: 600;
+}
+
+footer {
+    text-align: center;
+    color: white;
+    margin-top: 30px;
+    opacity: 0.8;
+    font-size: 0.85rem;
+}
+
+
+@media (max-width: 600px) {
+    body {
+        padding: 15px;
+    }
+    
+    .form-card, .result-card {
+        padding: 20px;
+    }
+    
+    header h1 {
+        font-size: 1.8rem;
+    }
+    
+    .crop-name {
+        font-size: 1.5rem;
+    }
+    
+    .crop-image {
+        width: 100px;
+        height: 100px;
+    }
+}
