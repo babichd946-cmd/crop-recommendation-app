@@ -134,7 +134,7 @@ async function predict() {
 
 // Ініціалізація
 document.addEventListener('DOMContentLoaded', function() {
-    console.log("🌱 AgroRadar готовий");
+    console.log("🌱 AgroRecommendation готовий");
     document.getElementById('predictBtn').addEventListener('click', predict);
     
     document.querySelectorAll('input').forEach(input => {
